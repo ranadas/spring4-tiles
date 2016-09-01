@@ -13,5 +13,9 @@ It contains some useful configuration items:
 
 ![](https://github.com/DanielMichalski/responsive-bootstrap-sites/blob/master/src/main/resources/img/screen_bootstrap.png)
 
+from : https://github.com/DanielMichalski/responsive-bootstrap-sites.git
 
+Rana :
 Upgrading libs
+added Jetty
+removing all xml configs
