@@ -12,3 +12,6 @@ It contains some useful configuration items:
 - Log4j
 
 ![](https://github.com/DanielMichalski/responsive-bootstrap-sites/blob/master/src/main/resources/img/screen_bootstrap.png)
+
+
+Upgrading libs
