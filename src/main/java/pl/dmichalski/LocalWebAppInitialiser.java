@@ -16,7 +16,7 @@ import javax.servlet.ServletRegistration;
 /**
  * Created by rdas on 01/09/2016.
  */
-public class LocalWebAppInitialiser extends WebMvcConfigurerAdapter implements WebApplicationInitializer {
+public class LocalWebAppInitialiser implements WebApplicationInitializer {
 
     @Override
     public void onStartup(ServletContext servletContext) {
@@ -41,14 +41,4 @@ public class LocalWebAppInitialiser extends WebMvcConfigurerAdapter implements W
         return context;
     }
 
-    //<!--<mvc:resources mapping="/resources/**" location="/resources/"/>-->
-    @Override
-    public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
-    }
-
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
-        configurer.enable();
-    }
 }
