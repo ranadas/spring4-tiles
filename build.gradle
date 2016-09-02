@@ -1,12 +1,12 @@
-apply plugin: 'java'
+//apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'idea'
 apply plugin: 'war'
-apply plugin: "jetty"
-
+//apply plugin: "jetty"
+apply plugin: 'org.akhikhl.gretty'
 
 group = 'com.springapp'
-version = '1.0-SNAPSHOT'
+//version = '1.0-SNAPSHOT'
 
 description = """responsive-bootstrap-sites"""
 
@@ -29,4 +29,20 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-log4j12', version:'1.7.5'
     testCompile group: 'org.springframework', name: 'spring-test', version:'4.2.7.RELEASE'
     testCompile group: 'junit', name: 'junit', version:'4.11'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.akhikhl.gretty:gretty:+'
+    }
+}
+
+gretty {
+    port = 8080
+    contextPath = "/$rootProject.name"
+    servletContainer = 'jetty9' //tomcat7 or tomcat8
 }
