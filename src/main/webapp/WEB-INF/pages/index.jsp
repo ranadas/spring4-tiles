@@ -17,7 +17,22 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div id="something"></div>
+            <script type="text/javascript">
+                $(document).ready(
+                        function () {
+                            console.log("in index js");
+                        }
+                );
+                var usr = '${user}';
+                var jsonObj = JSON.parse(usr);
+                console.log("Setting "+jsonObj.user);
+                document.getElementById('something').innerHTML= "<strong>Welcome</strong> back :" + jsonObj.user;
+            </script>
 
+
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
